@@ -20,4 +20,14 @@ class SpringbootDemoApplicationTests {
         users.forEach(System.out::println);
     }
 
+    @Test
+    public void testInsert(){
+        User user = new User();
+        user.setName("lisi");
+        user.setAge(11);
+        user.setEmail("sili@qq.com");
+        int insert = userMapper.insert(user);
+        System.out.println(insert);
+    }
+
 }
